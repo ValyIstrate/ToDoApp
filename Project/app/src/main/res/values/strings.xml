@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">ToDoApp</string>
+    <string name="mainTitle">ToDo App</string>
+    <string name="addButton">Add Task</string>
+    <string name="calendarButton">Calendar</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string name="drawer_taskTitle">Task Type</string>
+
+    <string name="bt_navBar_ShowTasks">Show Tasks</string>
+    <string name="bt_navBar_ShowCalendar">Show Calendar</string>
+
+    <string name="tasks_fragment">Tasks</string>
+    <string name="calendar_fragment">Calendar</string>
 </resources>

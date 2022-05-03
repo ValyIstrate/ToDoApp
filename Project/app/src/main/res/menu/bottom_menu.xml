@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/bt_navBar_ShowTasks"
+        android:id="@+id/show_tasks"
+        android:icon="@drawable/ic_list"/>
+
+    <item
+        android:title="@string/bt_navBar_ShowCalendar"
+        android:id="@+id/show_calendar"
+        android:icon="@drawable/ic_calendar"/>
+</menu>

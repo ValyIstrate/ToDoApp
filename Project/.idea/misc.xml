@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/fragment_calendar.xml" value="0.17135416666666667" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/fragment_tasks.xml" value="0.17135416666666667" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/nav_header.xml" value="0.17135416666666667" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/menu/bottom_menu.xml" value="0.17135416666666667" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/menu/menu.xml" value="0.15729166666666666" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/menu/navigation_menu.xml" value="0.15729166666666666" />
       </map>
     </option>
   </component>
