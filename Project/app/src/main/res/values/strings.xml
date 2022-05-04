@@ -12,4 +12,8 @@
 
     <string name="tasks_fragment">Tasks</string>
     <string name="calendar_fragment">Calendar</string>
+
+    <string name="home_tasks_fragment">Personal</string>
+    <string name="work_tasks_fragment">Work</string>
+    <string name="school_tasks_fragment">School</string>
 </resources>

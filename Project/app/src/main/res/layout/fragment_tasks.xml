@@ -13,4 +13,12 @@
         android:textSize="40sp"
         android:paddingHorizontal="140dp"/>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:id="@+id/type_of_task_container"
+        android:layout_marginTop="60dp"
+        android:layout_marginHorizontal="30dp"
+        />
+
 </FrameLayout>

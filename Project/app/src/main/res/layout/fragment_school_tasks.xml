@@ -3,21 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.CalendarFragment">
+    tools:context=".fragments.SchoolTasksFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/calendar_fragment"
-        android:textSize="40sp"
-        android:paddingHorizontal="120dp"/>
-
-    <CalendarView
-        android:id="@+id/calendar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="30dp"/>
+        android:text="@string/school_tasks_fragment"
+        android:textSize="20sp"
+        android:layout_marginStart="150dp"/>
 
 </FrameLayout>

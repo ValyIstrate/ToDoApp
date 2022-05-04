@@ -8,8 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
-import com.example.myapplication.fragments.CalendarFragment
-import com.example.myapplication.fragments.TasksFragment
+import com.example.myapplication.fragments.*
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
 
@@ -45,9 +44,22 @@ class MainActivity : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.nav_work -> Toast.makeText(applicationContext, "Work Tasks", Toast.LENGTH_SHORT).show()
-                R.id.nav_school -> Toast.makeText(applicationContext, "School Tasks", Toast.LENGTH_SHORT).show()
-                R.id.nav_personal -> Toast.makeText(applicationContext, "Personal Tasks", Toast.LENGTH_SHORT).show()
+
+                // whatever button we press, be it 'Work', 'Personal' or 'School',
+                    // we will be sent to the 'Tasks' fragment
+
+                R.id.nav_work -> {
+                    Toast.makeText(applicationContext, "Work Tasks", Toast.LENGTH_SHORT).show()
+                    replaceFragment(tasksFragment)
+                }
+                R.id.nav_school -> {
+                    Toast.makeText(applicationContext, "School Tasks", Toast.LENGTH_SHORT).show()
+                    replaceFragment(tasksFragment)
+                }
+                R.id.nav_personal -> {
+                    Toast.makeText(applicationContext, "Personal Tasks", Toast.LENGTH_SHORT).show()
+                    replaceFragment(tasksFragment)
+                }
             }
             true
         }
