@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.show_calendar -> replaceFragment(calendarFragment)
                 R.id.show_tasks -> replaceFragment(personalTasksFragment)   // the main task that will be shown after pressing the 'Tasks' button
                                                                     // will be 'Personal tasks'
+                R.id.add_task -> replaceFragment(addTasksFragment)
             }
             true
         }
@@ -72,6 +73,7 @@ class MainActivity : AppCompatActivity() {
     private val calendarFragment = CalendarFragment()
     private val workTasksFragment = WorkTasksFragment()
     private val schoolTasksFragment = SchoolTasksFragment()
+    private val addTasksFragment = AddTasksFragment()
 
     private fun replaceFragment(fragment: Fragment) {
         if(fragment != null) {

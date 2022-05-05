@@ -9,6 +9,7 @@
 
     <string name="bt_navBar_ShowTasks">Show Tasks</string>
     <string name="bt_navBar_ShowCalendar">Show Calendar</string>
+    <string name="bt_navBar_AddTask">Add Task</string>
 
     <string name="tasks_fragment">Tasks</string>
     <string name="calendar_fragment">Calendar</string>
@@ -16,4 +17,5 @@
     <string name="personal_tasks_fragment">Personal Tasks</string>
     <string name="work_tasks_fragment">Work Tasks</string>
     <string name="school_tasks_fragment">School Tasks</string>
+    <string name="add_tasks_fragment">Add Task</string>
 </resources>
