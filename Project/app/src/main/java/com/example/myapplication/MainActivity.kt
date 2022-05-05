@@ -21,12 +21,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // for the Bottom Navigation Bar
-        replaceFragment(tasksFragment)
+        replaceFragment(personalTasksFragment)
         val bottomNavigation : NavigationBarView = findViewById(R.id.bottom_navigation)
         bottomNavigation.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.show_calendar -> replaceFragment(calendarFragment)
-                R.id.show_tasks -> replaceFragment(tasksFragment)
+                R.id.show_tasks -> replaceFragment(personalTasksFragment)   // the main task that will be shown after pressing the 'Tasks' button
+                                                                    // will be 'Personal tasks'
             }
             true
         }
@@ -50,25 +51,27 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.nav_work -> {
                     Toast.makeText(applicationContext, "Work Tasks", Toast.LENGTH_SHORT).show()
-                    replaceFragment(tasksFragment)
+                    replaceFragment(workTasksFragment)
                 }
                 R.id.nav_school -> {
                     Toast.makeText(applicationContext, "School Tasks", Toast.LENGTH_SHORT).show()
-                    replaceFragment(tasksFragment)
+                    replaceFragment(schoolTasksFragment)
                 }
                 R.id.nav_personal -> {
                     Toast.makeText(applicationContext, "Personal Tasks", Toast.LENGTH_SHORT).show()
-                    replaceFragment(tasksFragment)
+                    replaceFragment(personalTasksFragment)
                 }
             }
             true
         }
-        // for the Navigation Bar
+        // for the Navigation Bars
     }
 
-    // for the Bottom Navigation Bar
-    private val tasksFragment = TasksFragment()
+    // for the buttons that will open the different types of tasks
+    private val personalTasksFragment = PersonalTasksFragment()
     private val calendarFragment = CalendarFragment()
+    private val workTasksFragment = WorkTasksFragment()
+    private val schoolTasksFragment = SchoolTasksFragment()
 
     private fun replaceFragment(fragment: Fragment) {
         if(fragment != null) {

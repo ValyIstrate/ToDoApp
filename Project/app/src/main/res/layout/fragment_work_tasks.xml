@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/work_tasks_fragment"
-        android:textSize="20sp"
-        android:layout_marginStart="150dp"/>
+        android:textSize="30sp"
+        android:paddingHorizontal="120dp"/>
 
 </FrameLayout>
