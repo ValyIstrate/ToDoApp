@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="5dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/taskTitle"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="4dp"
+            android:layout_margin="4dp"
+            android:id="@+id/idTVTaskTitle"
+            android:layout_toStartOf="@id/idIVUpdate"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/white"
+            android:id="@+id/idTVDescription"
+            android:layout_below="@id/idTVTimeStamp"
+            android:layout_margin="4dp"
+            android:layout_toStartOf="@id/idIVUpdate"
+            android:padding="4dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTimeStamp"
+            android:text="@string/dueDate"
+            android:textColor="@color/white"
+            android:layout_below="@id/idTVTaskTitle"
+            android:layout_margin="4dp"
+            android:padding="4dp"
+            android:layout_toStartOf="@id/idIVUpdate"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idIVDelete"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_delete"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:padding="4dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idIVUpdate"
+            android:src="@drawable/ic_update_status"
+            app:tint="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:padding="4dp"
+            android:layout_toStartOf="@+id/idIVDelete"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

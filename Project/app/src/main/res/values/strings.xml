@@ -18,4 +18,8 @@
     <string name="work_tasks_fragment">Work Tasks</string>
     <string name="school_tasks_fragment">School Tasks</string>
     <string name="add_tasks_fragment">Add Task</string>
+
+    <string name="taskTitle">Task Title</string>
+    <string name="dueDate">Due Date</string>
+    <string name="description">Description</string>
 </resources>

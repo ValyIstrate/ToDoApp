@@ -2,7 +2,7 @@ package com.example.myapplication.model
 
 import androidx.lifecycle.LiveData
 
-class TaskRepository(private val tasksDao: tasksDao) {
+class TaskRepository(private val tasksDao: TasksDao) {
     val allTasks: LiveData<List<Task>> = tasksDao.getAllTasks()
 
     suspend fun insert(task: Task) {
