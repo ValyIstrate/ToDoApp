@@ -7,22 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
-import com.example.myapplication.TaskClickDeleteInterface
-import com.example.myapplication.TaskRVAdapter
+import com.example.myapplication.*
+import com.example.myapplication.model.Task
 import com.example.myapplication.model.TaskViewModel
+import android.app.Application
 
 /**
  * A simple [Fragment] subclass.
  * Use the [PersonalTasksFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PersonalTasksFragment : Fragment() {
+class PersonalTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpdateInterface,
+    TaskClickInterface {
 
-    lateinit var tasksRV: RecyclerView
-    lateinit var viewModel: TaskViewModel
+    private lateinit var tasksRV: RecyclerView
+    private lateinit var viewModel: TaskViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,10 +40,23 @@ class PersonalTasksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         // What to do here??
+        tasksRV = requireView().findViewById<RecyclerView>(R.id.personal_tasksRV)
+        tasksRV.layoutManager = LinearLayoutManager(activity)
 
-        //tasksRV = requireView().findViewById<RecyclerView>(R.id.personal_tasksRV)
-        //tasksRV.layoutManager = LinearLayoutManager(this)
+        val taskRVAdapter = TaskRVAdapter(requireActivity(), this, this, this)
+        tasksRV.adapter = taskRVAdapter
+        //viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(TaskViewModel::class.java)
+    }
 
-        //val taskRVAdapter = TaskRVAdapter(this, this, this, this)
+    override fun onDeleteIconClick(task: Task) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onUpdateIconClick(task: Task) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onTaskClick(task: Task) {
+        TODO("Not yet implemented")
     }
 }

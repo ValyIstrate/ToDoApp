@@ -10,18 +10,18 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.model.Task
 
 class TaskRVAdapter(val context: Context,
-                    val taskClickDeleteInterface: TaskClickDeleteInterface,
-                    val taskClickUpdateInterface: TaskClickUpdateInterface,
-                    val taskClickInterface: TaskClickInterface) :
+                    private val taskClickDeleteInterface: TaskClickDeleteInterface,
+                    private val taskClickUpdateInterface: TaskClickUpdateInterface,
+                    private val taskClickInterface: TaskClickInterface) :
     RecyclerView.Adapter<TaskRVAdapter.ViewHolder>() {
 
     private val allTasks = ArrayList<Task>()
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val taskTV = itemView.findViewById<TextView>(R.id.idTVTaskTitle)
-        val timeTV = itemView.findViewById<TextView>(R.id.idTVTimeStamp)
-        val desciptionTV = itemView.findViewById<TextView>(R.id.idTVDescription)
-        val deleteIV = itemView.findViewById<ImageView>(R.id.idIVDelete)
-        val updateIV = itemView.findViewById<ImageView>(R.id.idIVUpdate)
+        val taskTV: TextView = itemView.findViewById<TextView>(R.id.idTVTaskTitle)
+        val timeTV: TextView = itemView.findViewById<TextView>(R.id.idTVTimeStamp)
+        val descriptionTV: TextView = itemView.findViewById<TextView>(R.id.idTVDescription)
+        val deleteIV: ImageView = itemView.findViewById<ImageView>(R.id.idIVDelete)
+        val updateIV: ImageView = itemView.findViewById<ImageView>(R.id.idIVUpdate)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,9 +30,9 @@ class TaskRVAdapter(val context: Context,
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.taskTV.setText(allTasks.get(position).taskName)
-        holder.timeTV.setText("Due Date: " + allTasks.get(position).dueDate)
-        holder.desciptionTV.setText(allTasks.get(position).description)
+        holder.taskTV.text = allTasks.get(position).taskName
+        holder.timeTV.setText("Due date: " + allTasks.get(position).dueDate)
+        holder.descriptionTV.setText(allTasks.get(position).description)
 
         holder.deleteIV.setOnClickListener {
             taskClickDeleteInterface.onDeleteIconClick(allTasks.get(position))
