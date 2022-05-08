@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -12,16 +13,22 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.fragments.*
+import com.example.myapplication.model.Task
 import com.example.myapplication.model.TaskViewModel
 import com.google.android.material.navigation.NavigationBarView
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.delay
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var toggle : ActionBarDrawerToggle // for the Navigation Bar
+    //var viewModel: TaskViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(TaskViewModel::class.java) // for the RV
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setTheme(R.style.Theme_MyApplication)
+
         setContentView(R.layout.activity_main)
 
         // for the Bottom Navigation Bar
@@ -32,7 +39,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.show_calendar -> replaceFragment(calendarFragment)
                 R.id.show_tasks -> replaceFragment(personalTasksFragment)   // the main task that will be shown after pressing the 'Tasks' button
                                                                     // will be 'Personal tasks'
-                R.id.add_task -> replaceFragment(addTasksFragment)
             }
             true
         }
@@ -77,7 +83,6 @@ class MainActivity : AppCompatActivity() {
     private val calendarFragment = CalendarFragment()
     private val workTasksFragment = WorkTasksFragment()
     private val schoolTasksFragment = SchoolTasksFragment()
-    private val addTasksFragment = AddTasksFragment()
 
     private fun replaceFragment(fragment: Fragment) {
         if(fragment != null) {

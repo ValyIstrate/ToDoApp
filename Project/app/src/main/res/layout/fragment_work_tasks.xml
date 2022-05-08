@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.WorkTasksFragment">
+    tools:context=".fragments.WorkTasksFragment"
+    android:background="@color/bdazzeld_blue">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/work_tasks_fragment"
         android:textSize="30sp"
-        android:paddingHorizontal="120dp"/>
+        android:paddingHorizontal="120dp"
+        android:textColor="@color/white"/>
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:id="@+id/work_tasksRV"
+        tools:listitem="@layout/task_rv_item"
+        android:layout_marginBottom="30dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/idFABAddTask"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/met_gold"
+        />
+
+</RelativeLayout>

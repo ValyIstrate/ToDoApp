@@ -9,11 +9,7 @@
     <item
         android:title="@string/bt_navBar_ShowCalendar"
         android:id="@+id/show_calendar"
-        android:icon="@drawable/ic_calendar"/>
-
-    <item
-        android:title="@string/bt_navBar_AddTask"
-        android:id="@+id/add_task"
-        android:icon="@drawable/ic_add"/>
+        android:icon="@drawable/ic_calendar"
+        />
 
 </menu>

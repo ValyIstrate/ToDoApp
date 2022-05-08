@@ -1,19 +1,22 @@
 package com.example.myapplication.fragments
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.RelativeLayout
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.*
 import com.example.myapplication.model.Task
 import com.example.myapplication.model.TaskViewModel
-import android.app.Application
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 /**
  * A simple [Fragment] subclass.
@@ -24,6 +27,7 @@ class PersonalTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpd
     TaskClickInterface {
 
     private lateinit var tasksRV: RecyclerView
+    private lateinit var addFAB: FloatingActionButton
     private lateinit var viewModel: TaskViewModel
 
     override fun onCreateView(
@@ -39,24 +43,43 @@ class PersonalTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpd
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // What to do here??
         tasksRV = requireView().findViewById<RecyclerView>(R.id.personal_tasksRV)
         tasksRV.layoutManager = LinearLayoutManager(activity)
 
         val taskRVAdapter = TaskRVAdapter(requireActivity(), this, this, this)
         tasksRV.adapter = taskRVAdapter
-        //viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(TaskViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(TaskViewModel::class.java)
+        viewModel.allTasks.observe(requireActivity(), Observer { list ->
+            list?.let {
+                taskRVAdapter.updateList(it)
+            }
+        })
+
+        addFAB = requireView().findViewById(R.id.idFABAddTask)
+        addFAB.setOnClickListener {
+            val intent = Intent(this.requireActivity(), AddTaskActivity::class.java)
+            startActivity(intent)
+            this.requireActivity().finish()
+        }
+
     }
 
     override fun onDeleteIconClick(task: Task) {
-        TODO("Not yet implemented")
+        viewModel.deleteTask(task)
+        Toast.makeText(this.requireActivity(), "${task.taskName} Deleted", Toast.LENGTH_LONG).show()
     }
 
     override fun onUpdateIconClick(task: Task) {
-        TODO("Not yet implemented")
+        //TODO
     }
 
     override fun onTaskClick(task: Task) {
-        TODO("Not yet implemented")
+        val intent = Intent(this.requireActivity(), AddTaskActivity::class.java)
+        intent.putExtra("taskType", "Edit")
+        intent.putExtra("taskTitle", task.taskName)
+        intent.putExtra("taskDescription", task.description)
+        intent.putExtra("taskID", task.taskId)
+        startActivity(intent)
+        this.requireActivity().finish()
     }
 }

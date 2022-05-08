@@ -12,4 +12,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="yellow">#FFFFCC</color>
     <color name="underline">#BDB8B8</color>
+
+    <color name="bdazzeld_blue">#3D5A80</color>
+    <color name="rose_dust">#9D5C63</color>
+    <color name="light_cyan">#DEFFF2</color>
+    <color name="capri">#00BBF9</color>
+    <color name="met_gold">#D1AC00</color>
 </resources>

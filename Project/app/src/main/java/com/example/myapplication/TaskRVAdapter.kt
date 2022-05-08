@@ -31,7 +31,7 @@ class TaskRVAdapter(val context: Context,
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.taskTV.text = allTasks.get(position).taskName
-        holder.timeTV.setText("Due date: " + allTasks.get(position).dueDate)
+        //holder.timeTV.setText("Due date: " + allTasks.get(position).dueDate)
         holder.descriptionTV.setText(allTasks.get(position).description)
 
         holder.deleteIV.setOnClickListener {

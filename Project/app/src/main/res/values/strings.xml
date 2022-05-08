@@ -22,4 +22,8 @@
     <string name="taskTitle">Task Title</string>
     <string name="dueDate">Due Date</string>
     <string name="description">Description</string>
+
+    <string name="enterTitle">Enter Task Title</string>
+    <string name="enterDescription">Enter Task Description</string>
+    <string name="btnText">ADD</string>
 </resources>

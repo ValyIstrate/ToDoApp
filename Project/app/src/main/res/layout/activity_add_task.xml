@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskActivity"
+    android:background="@color/bdazzeld_blue">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idEditTaskTitle"
+        android:hint="@string/enterTitle"
+        android:layout_margin="10dp"
+        android:textColorHint="@color/white"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/idEditTaskDesc"
+        android:hint="@string/enterDescription"
+        android:layout_margin="5dp"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:layout_below="@+id/idEditTaskTitle"
+        android:layout_above="@id/idBtn"
+        android:textColorHint="@color/white"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idBtn"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btnText"
+        android:textAllCaps="false"
+        android:background="@drawable/add_button"
+        />
+
+</RelativeLayout>

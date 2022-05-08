@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/drawable/add_button.xml" value="0.2435" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/drawable/ic_list.xml" value="0.2435" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/drawable/ic_splash_screen.xml" value="0.2435" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/drawable/ic_update_status.xml" value="0.2435" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/drawable/splash_image.xml" value="0.2435" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/activity_add_task.xml" value="0.234375" />
         <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/activity_splash_screen.xml" value="0.2391304347826087" />
         <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/fragment_add_tasks.xml" value="0.17135416666666667" />
         <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/fragment_calendar.xml" value="0.17135416666666667" />
         <entry key="..\:/ToDoApp/ToDoApp/Project/app/src/main/res/layout/fragment_home_tasks.xml" value="0.17135416666666667" />

@@ -3,21 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.PersonalTasksFragment">
+    tools:context=".fragments.PersonalTasksFragment"
+    android:background="@color/bdazzeld_blue">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/personal_tasks_fragment"
+        android:textColor="@color/white"
         android:textSize="30sp"
         android:paddingHorizontal="100dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="65dp"
         android:id="@+id/personal_tasksRV"
         tools:listitem="@layout/task_rv_item"
+        android:layout_marginBottom="30dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/idFABAddTask"
+        android:layout_margin="5dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/met_gold"
         />
 
 
