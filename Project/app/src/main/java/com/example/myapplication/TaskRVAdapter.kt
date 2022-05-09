@@ -22,6 +22,7 @@ class TaskRVAdapter(val context: Context,
         val descriptionTV: TextView = itemView.findViewById<TextView>(R.id.idTVDescription)
         val deleteIV: ImageView = itemView.findViewById<ImageView>(R.id.idIVDelete)
         val updateIV: ImageView = itemView.findViewById<ImageView>(R.id.idIVUpdate)
+        val statusTV: TextView = itemView.findViewById<TextView>(R.id.idTVStatus)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -33,6 +34,7 @@ class TaskRVAdapter(val context: Context,
         holder.taskTV.text = allTasks.get(position).taskName
         //holder.timeTV.setText("Due date: " + allTasks.get(position).dueDate)
         holder.descriptionTV.setText(allTasks.get(position).description)
+        holder.statusTV.setText(allTasks.get(position).taskStatus)
 
         holder.deleteIV.setOnClickListener {
             taskClickDeleteInterface.onDeleteIconClick(allTasks.get(position))

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.fragments.PersonalTasksFragment
@@ -45,10 +46,11 @@ class AddTaskActivity : AppCompatActivity() {
         addBtn.setOnClickListener {
             val taskTitle = taskTitleEdit.text.toString()
             val taskDescription = taskDescriptionEdit.text.toString()
+            val taskStatus = "TO DO"
 
             if(taskType.equals("Edit")) {
                 if(taskTitle.isNotEmpty() && taskDescription.isNotEmpty()) {
-                    val updateTask = Task(taskTitle, "Personal", "Tomorrow", true, false, false, taskDescription)
+                    val updateTask = Task(taskTitle, "Personal", taskStatus, taskDescription)
                     updateTask.taskId = taskID
                     viewModel.updateTask(updateTask)
                     Toast.makeText(this, "Task Updated...", Toast.LENGTH_LONG).show()
@@ -56,7 +58,7 @@ class AddTaskActivity : AppCompatActivity() {
             }
             else {
                 if(taskTitle.isNotEmpty() && taskDescription.isNotEmpty()) {
-                    viewModel.addTask(Task(taskTitle, "Personal", "Tomorrow", true, false, false, taskDescription))
+                    viewModel.addTask(Task(taskTitle, "Personal", taskStatus, taskDescription))
                     Toast.makeText(this, "Task Added...", Toast.LENGTH_LONG).show()
                 }
             }

@@ -16,4 +16,8 @@ class TaskRepository(private val tasksDao: TasksDao) {
     suspend fun update(task: Task) {
         tasksDao.update(task)
     }
+
+    fun update(newStatus: String, id: Int) {
+        tasksDao.update(newStatus, id)
+    }
 }
