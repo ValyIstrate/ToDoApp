@@ -21,7 +21,7 @@
         android:layout_marginTop="65dp"
         android:id="@+id/school_tasksRV"
         tools:listitem="@layout/task_rv_item"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="50dp"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

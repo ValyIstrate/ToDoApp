@@ -67,13 +67,14 @@ class SchoolTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpdat
     }
 
     override fun onUpdateIconClick(task: Task) {
-        val textView: TextView = requireView().findViewById(R.id.idTVStatus)
+        val taskStatus = task.taskStatus
+        val taskID = task.taskId
 
-        if(textView.text.toString().equals(("Status: TO DO"))) {
-            textView.text = getString(R.string.taskStatus2)
+        if(taskStatus.equals(("TO DO"))) {
+            viewModel.updateTask(task, "IN PROGRESS", taskID)
         }
-        else if(textView.text.toString().equals(("Status: IN PROGRESS"))) {
-            textView.text = getString(R.string.taskStatus3)
+        else if(taskStatus.equals(("IN PROGRESS"))) {
+            viewModel.updateTask(task, "DONE", taskID)
         }
         else {
             Toast.makeText(this.requireActivity(), "${task.taskName} is DONE, you should delete it!", Toast.LENGTH_LONG).show()

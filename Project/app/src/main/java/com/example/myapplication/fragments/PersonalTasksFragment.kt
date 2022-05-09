@@ -72,8 +72,6 @@ class PersonalTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpd
     }
 
     override fun onUpdateIconClick(task: Task) {
-        val taskTitle = task.taskName
-        val taskDescription = task.description
         val taskStatus = task.taskStatus
         val taskID = task.taskId
 

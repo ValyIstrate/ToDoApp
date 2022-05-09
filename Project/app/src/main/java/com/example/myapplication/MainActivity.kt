@@ -22,7 +22,6 @@ import kotlinx.coroutines.delay
 class MainActivity : AppCompatActivity() {
 
     private lateinit var toggle : ActionBarDrawerToggle // for the Navigation Bar
-    //var viewModel: TaskViewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())).get(TaskViewModel::class.java) // for the RV
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,9 +56,6 @@ class MainActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
 
-                // whatever button we press, be it 'Work', 'Personal' or 'School',
-                    // we will be sent to the 'Tasks' fragment
-
                 R.id.nav_work -> {
                     Toast.makeText(applicationContext, "Work Tasks", Toast.LENGTH_SHORT).show()
                     replaceFragment(workTasksFragment)
@@ -92,7 +88,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // for the Navigation Bar
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if(toggle.onOptionsItemSelected(item)) {
             return true
@@ -100,5 +95,4 @@ class MainActivity : AppCompatActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-    // for the Navigation Bar
 }
