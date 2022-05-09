@@ -20,6 +20,9 @@
     <string name="add_tasks_fragment">Add Task</string>
 
     <string name="taskTitle">Task Title</string>
+    <string name="taskStatus1">Status: TO DO</string>
+    <string name="taskStatus2">Status: IN PROGRESS</string>
+    <string name="taskStatus3">Status: DONE</string>
     <string name="dueDate">Due Date</string>
     <string name="description">Description</string>
 

@@ -44,7 +44,7 @@ class AddTaskActivity : AppCompatActivity() {
 
         addBtn.setOnClickListener {
             val taskTitle = taskTitleEdit.text.toString()
-            val taskDescription= taskDescriptionEdit.text.toString()
+            val taskDescription = taskDescriptionEdit.text.toString()
 
             if(taskType.equals("Edit")) {
                 if(taskTitle.isNotEmpty() && taskDescription.isNotEmpty()) {
@@ -56,7 +56,7 @@ class AddTaskActivity : AppCompatActivity() {
             }
             else {
                 if(taskTitle.isNotEmpty() && taskDescription.isNotEmpty()) {
-                    viewModel.addTask(Task(taskTitle, "Personal", "Tomorrow", true, false, false , taskDescription))
+                    viewModel.addTask(Task(taskTitle, "Personal", "Tomorrow", true, false, false, taskDescription))
                     Toast.makeText(this, "Task Added...", Toast.LENGTH_LONG).show()
                 }
             }

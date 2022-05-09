@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import android.widget.RelativeLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -70,7 +72,17 @@ class PersonalTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpd
     }
 
     override fun onUpdateIconClick(task: Task) {
-        //TODO
+        val textView: TextView = requireView().findViewById(R.id.idTVStatus)
+
+        if(textView.text.toString().equals(("Status: TO DO"))) {
+            textView.text = getString(R.string.taskStatus2)
+        }
+        else if(textView.text.toString().equals(("Status: IN PROGRESS"))) {
+            textView.text = getString(R.string.taskStatus3)
+        }
+        else {
+            Toast.makeText(this.requireActivity(), "${task.taskName} is DONE, you should delete it!", Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onTaskClick(task: Task) {
