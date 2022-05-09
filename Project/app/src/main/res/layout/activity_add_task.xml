@@ -26,8 +26,47 @@
         android:inputType="textMultiLine"
         android:singleLine="false"
         android:layout_below="@+id/idEditTaskTitle"
-        android:layout_above="@id/idBtn"
+        android:layout_above="@id/idTypeSelector"
         android:textColorHint="@color/white"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/idTypeSelector"
+        android:layout_above="@id/dateBtn"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioPersonal"
+            android:text="@string/personal" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioWork"
+            android:text="@string/work" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioSchool"
+            android:text="@string/school"/>
+
+    </RadioGroup>
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/dateBtn"
+        android:layout_margin="20dp"
+        android:layout_above="@id/idBtn"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle_background"
+        android:src="@drawable/ic_calendar"
+        />
 
     <android.widget.Button
         android:layout_width="match_parent"

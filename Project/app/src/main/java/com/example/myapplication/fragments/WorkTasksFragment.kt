@@ -48,7 +48,7 @@ class WorkTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpdateI
         viewModel = ViewModelProvider(requireActivity()).get(TaskViewModel::class.java)
         viewModel.allTasks.observe(requireActivity(), Observer { list ->
             list?.let {
-                taskRVAdapter.updateList(it)
+                        taskRVAdapter.updateList(it)
             }
         })
 

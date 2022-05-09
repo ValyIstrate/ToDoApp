@@ -8,17 +8,12 @@ import com.example.myapplication.Convertor
 import java.util.*
 
 @Entity(tableName = "tasksTable")
+@TypeConverters(Convertor::class)
 class Task(@ColumnInfo(name = "taskName")val taskName:String,
            @ColumnInfo(name = "taskType")val taskType:String,
            @ColumnInfo(name = "taskStatus")val taskStatus:String,
-           //@ColumnInfo(name = "dueDate")val dueDate:String,
-           //@ColumnInfo(name = "createdAt")val createdAt:Date,
-           //@ColumnInfo(name = "to_do")val toDo:Boolean,
-           //@ColumnInfo(name = "in_progress")val inProgress:Boolean,
-           //@ColumnInfo(name = "done")val done:Boolean,
-           @ColumnInfo(name = "description")val description:String) {
+           @ColumnInfo(name = "description")val description:String,
+           @ColumnInfo(name = "dueDate")val dueDate:Date) {
     @PrimaryKey(autoGenerate = true)
     var taskId = 0
-
-    // might need a toString function
 }

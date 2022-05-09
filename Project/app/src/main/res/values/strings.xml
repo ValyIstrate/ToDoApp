@@ -29,4 +29,8 @@
     <string name="enterTitle">Enter Task Title</string>
     <string name="enterDescription">Enter Task Description</string>
     <string name="btnText">ADD</string>
+
+    <string name="personal">Personal</string>
+    <string name="work">Work</string>
+    <string name="school">School</string>
 </resources>
