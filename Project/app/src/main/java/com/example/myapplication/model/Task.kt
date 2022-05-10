@@ -13,7 +13,7 @@ class Task(@ColumnInfo(name = "taskName")val taskName:String,
            @ColumnInfo(name = "taskType")val taskType:String,
            @ColumnInfo(name = "taskStatus")val taskStatus:String,
            @ColumnInfo(name = "description")val description:String,
-           @ColumnInfo(name = "dueDate")val dueDate:Date) {
+           @ColumnInfo(name = "dueDate")val dueDate:String) {
     @PrimaryKey(autoGenerate = true)
     var taskId = 0
 }

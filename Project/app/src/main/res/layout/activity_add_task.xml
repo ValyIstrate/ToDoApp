@@ -17,23 +17,26 @@
         android:textColorHint="@color/white"/>
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/idEditTaskDesc"
-        android:hint="@string/enterDescription"
-        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/idTypeSelector"
+        android:layout_below="@+id/idEditTaskTitle"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:gravity="start|top"
+        android:hint="@string/enterDescription"
         android:inputType="textMultiLine"
         android:singleLine="false"
-        android:layout_below="@+id/idEditTaskTitle"
-        android:layout_above="@id/idTypeSelector"
-        android:textColorHint="@color/white"/>
+        android:textColorHint="@color/white" />
 
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/idTypeSelector"
-        android:layout_above="@id/dateBtn"
+        android:layout_above="@id/idSetDate"
         android:padding="10dp"
         android:layout_margin="10dp">
 
@@ -57,16 +60,31 @@
 
     </RadioGroup>
 
-    <ImageButton
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:id="@+id/dateBtn"
-        android:layout_margin="20dp"
+    <TextView
+        android:id="@+id/idSetDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_above="@id/idBtn"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/circle_background"
-        android:src="@drawable/ic_calendar"
-        />
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/setDeadline"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/idSetTime"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/idBtn"
+        android:layout_toEndOf="@id/idSetDate"
+        android:padding="10dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:text="@string/setTime"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
 
     <android.widget.Button
         android:layout_width="match_parent"

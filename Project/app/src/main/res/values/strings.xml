@@ -33,4 +33,7 @@
     <string name="personal">Personal</string>
     <string name="work">Work</string>
     <string name="school">School</string>
+
+    <string name="setDeadline">Set Date</string>
+    <string name="setTime">Set Time</string>
 </resources>
