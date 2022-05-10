@@ -46,9 +46,9 @@ class SchoolTasksFragment : Fragment(), TaskClickDeleteInterface, TaskClickUpdat
         val taskRVAdapter = TaskRVAdapter(requireActivity(), this, this, this)
         tasksRV.adapter = taskRVAdapter
         viewModel = ViewModelProvider(requireActivity()).get(TaskViewModel::class.java)
-        viewModel.allTasks.observe(requireActivity(), Observer { list ->
+        viewModel.schTasks.observe(requireActivity(), Observer { list ->
             list?.let {
-                        taskRVAdapter.updateList(it)
+                taskRVAdapter.updateList(it)
             }
         })
 

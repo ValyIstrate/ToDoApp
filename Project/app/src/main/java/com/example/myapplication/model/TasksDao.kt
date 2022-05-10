@@ -26,4 +26,7 @@ interface TasksDao {
     @Query("UPDATE tasksTable SET taskStatus=:newStatus WHERE taskId = :id")
     fun update(newStatus: String, id: Int)
 
+    @Query("SELECT * from tasksTable WHERE taskType == :chosenType ORDER BY taskId ASC")
+    fun select(chosenType: String): LiveData<List<Task>>
+
 }

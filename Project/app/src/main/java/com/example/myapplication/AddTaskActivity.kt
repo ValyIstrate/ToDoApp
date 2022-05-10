@@ -16,6 +16,7 @@ class AddTaskActivity : AppCompatActivity() {
     lateinit var taskDescriptionEdit: EditText
     lateinit var addBtn: Button
     lateinit var viewModel: TaskViewModel
+    lateinit var deadlineBtn: ImageButton
 
     var taskID = -1
 
@@ -26,12 +27,11 @@ class AddTaskActivity : AppCompatActivity() {
         taskTitleEdit = findViewById(R.id.idEditTaskTitle)
         taskDescriptionEdit = findViewById(R.id.idEditTaskDesc)
         addBtn = findViewById(R.id.idBtn)
-
+        deadlineBtn = findViewById(R.id.dateBtn)
 
         val radioButtonPers: RadioButton = findViewById(R.id.radioPersonal)
         val radioButtonWork: RadioButton = findViewById(R.id.radioWork)
         val radioButtonSch: RadioButton = findViewById(R.id.radioSchool)
-
 
 
         viewModel = ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application)).get(TaskViewModel::class.java)
@@ -50,6 +50,8 @@ class AddTaskActivity : AppCompatActivity() {
         }
 
         addBtn.setOnClickListener {
+
+            // For choosing the task type
             val taskTitle = taskTitleEdit.text.toString()
             val taskDescription = taskDescriptionEdit.text.toString()
             val taskStatus = "TO DO"
@@ -59,7 +61,7 @@ class AddTaskActivity : AppCompatActivity() {
             val checkedWork = radioButtonWork.isChecked
             val checkedSch = radioButtonSch.isChecked
 
-           if(checkedPers) {
+            if(checkedPers) {
                 taskTypeSelect = "Personal"
             }
             else if (checkedWork) {
@@ -68,6 +70,12 @@ class AddTaskActivity : AppCompatActivity() {
             else if(checkedSch) {
                 taskTypeSelect = "School"
             }
+            // We gave taskTypeSelect the value we choose from the radio group
+
+            // For choosing the deadline
+            //deadlineBtn.setOnClickListener {
+
+            //}
 
             if(taskType.equals("Edit")) {
                 if(taskTitle.isNotEmpty() && taskDescription.isNotEmpty()) {
