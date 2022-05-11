@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:text="@string/work_tasks_fragment"
         android:textSize="30sp"
-        android:paddingHorizontal="120dp"
+        android:paddingStart="120dp"
         android:textColor="@color/white"/>
 
     <androidx.recyclerview.widget.RecyclerView

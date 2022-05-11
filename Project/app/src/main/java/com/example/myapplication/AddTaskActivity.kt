@@ -56,7 +56,7 @@ class AddTaskActivity : AppCompatActivity() {
             taskDescriptionEdit.setText(taskDescription)
         }
         else {
-            addBtn.setText("Save Note")
+            addBtn.setText("Save Task")
         }
 
         // for the deadline
