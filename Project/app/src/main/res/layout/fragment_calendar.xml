@@ -12,7 +12,7 @@
         android:text="@string/calendar_fragment"
         android:textColor="@color/white"
         android:textSize="40sp"
-        android:paddingStart="120dp"/>
+        android:paddingStart="20dp"/>
 
     <CalendarView
         android:id="@+id/calendar"

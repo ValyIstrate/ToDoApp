@@ -12,7 +12,8 @@
         android:text="@string/personal_tasks_fragment"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:paddingStart="100dp"/>
+        android:paddingStart="20dp"
+        android:paddingBottom="30dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
